@@ -1,7 +1,3 @@
-output "appsync_channel_namespaces_id" {
-  description = "Map of id values across all appsync_channel_namespaces, keyed the same as var.appsync_channel_namespaces"
-  value       = { for k, v in aws_appsync_channel_namespace.appsync_channel_namespaces : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "appsync_channel_namespaces_api_id" {
   description = "Map of api_id values across all appsync_channel_namespaces, keyed the same as var.appsync_channel_namespaces"
   value       = { for k, v in aws_appsync_channel_namespace.appsync_channel_namespaces : k => v.api_id if v.api_id != null && length(v.api_id) > 0 }
